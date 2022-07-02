@@ -2,39 +2,17 @@ import { defaultColors } from './colors/default';
 
 export const baseTheme = {
   colors: {
-    livePrimary: '#cc2b1e',
 
-    primary: '#f7a11d',
-    secondary: '',
-    primaryGradient: 'linear-gradient(90deg, #ef7b30, #f38d27, #f6a01d)',
+    colorText: '#fff',
 
-    background: '#202020',
-    backgroundHeader: 'rgb(32, 32, 32)',
-    backgroundHeaderTransparent: 'rgba(0,0,0, 0.8)',
-    backgroundSecondary: '#191818',
-    backgroundScroll: 'rgb(32, 32, 32)',
-    backgroundGradient: '$primaryGradient',
-    backgroundHover: 'rgba(0, 0, 0, 0.6)',
-    
-    textOnBackground: '#999999',
-    textOnBackgroundSecondary: '#fff',
-    textOnBackgroundGradient: '#000',
-    textOnBackgroundImage: '#fff',
-    textOnBackgroundImageSecondary: '#b4b4b4',
-
-    sliderButtonEnabled: '#fff',
-    sliderButtonDisabled: 'rgba(255,255,255,.4)',
-
-    borderSeparator: '#444444',
-  
-    backgroundCreateProfile: '#333',
+    spinner: '#4b8b3b',
 
     ...defaultColors,
   },
   fonts: {
-    light: 'UOLTextLight, Arial, Helvetica, sans-serif',
-    regular: 'UOLTextRegular, Arial, Helvetica, sans-serif',
-    bold: 'UOLTextBold, Arial, Helvetica, sans-serif',
+    light: '',
+    regular: '',
+    bold: '',
   },
   sizes:{
     1: '2px',

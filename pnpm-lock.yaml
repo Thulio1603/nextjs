@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@stitches/react': ^1.2.8
   '@testing-library/react': ^13.3.0
   '@types/jest': ^28.1.4
   '@types/node': 18.0.0
@@ -16,6 +17,7 @@ specifiers:
   typescript: 4.7.4
 
 dependencies:
+  '@stitches/react': 1.2.8_react@18.2.0
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   jest: 28.1.2_@types+node@18.0.0
   msw: 0.42.3_typescript@4.7.4
@@ -861,6 +863,14 @@ packages:
     resolution: {integrity: sha512-BPS4ynJW/o92PUR4wgriz2Ud5gpST5vz6GQfMixEDK0Z8ZCUv2M7SkBLykH56T++Xs+8ln9zTGbOvNGIe02/jw==}
     dependencies:
       '@sinonjs/commons': 1.8.3
+    dev: false
+
+  /@stitches/react/1.2.8_react@18.2.0:
+    resolution: {integrity: sha512-9g9dWI4gsSVe8bNLlb+lMkBYsnIKCZTmvqvDG+Avnn69XfmHZKiaMrx7cgTaddq7aTPPmXiTsbFcUy0xgI4+wA==}
+    peerDependencies:
+      react: '>= 16.3.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@swc/helpers/0.4.2:

@@ -1,7 +1,6 @@
 import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react';
 import { baseTheme } from './theme';
-import 'react-multi-carousel/lib/styles.css'
 
 const { styled, getCssText, globalCss, css, config, theme, keyframes } = createStitches({
   theme: baseTheme,
