@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 
   return (
     <Wrapper>
-      <Spinner />
+      <Spinner data-testid='spinner' />
     </Wrapper>
   )
 }
