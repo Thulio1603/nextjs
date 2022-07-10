@@ -5,7 +5,10 @@ export const baseTheme = {
 
     colorText: '#fff',
 
-    spinner: '#4b8b3b',
+    green: '#4b8b3b',
+    red: '#ff0000',
+    yellow: '#ffeb00',
+    blue: '#004eff',
 
     ...defaultColors,
   },

@@ -18,5 +18,21 @@ export const Spinner = styled('div', {
   borderRadius: '$circular',
   borderStyle: 'solid',
   borderColor: 'transparent',
-  borderLeftColor: '$spinner',
+
+  variants: { 
+    color: { 
+      green: { 
+        borderLeftColor: '$green',
+      },
+      red: { 
+        borderLeftColor: '$red',
+      },
+      yellow: { 
+        borderLeftColor: '$yellow',
+      },
+      blue: { 
+        borderLeftColor: '$blue',
+      }
+    }
+  }
 })

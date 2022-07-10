@@ -5,8 +5,8 @@ import { baseTheme } from './theme';
 const { styled, getCssText, globalCss, css, config, theme, keyframes } = createStitches({
   theme: baseTheme,
   media: {
-    mobile: '(max-width: 641px)',
-    sm: '(min-width: 641px)',
+    mobile: '(max-width: 767px)',
+    sm: '(min-width: 767px)',
     md: '(min-width: 961px)',
     lg: '(min-width: 1025px)',
     xl: '(min-width: 1281px)',
