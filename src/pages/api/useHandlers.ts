@@ -5,7 +5,7 @@ export default handler()
     const { cookie } = req.headers;
     console.log(cookie)
     try {
-      res.status(200).json('data')
+      res.status(200).json('datas')
     } catch (error: any) {
       res.status(error?.response?.status || 404).json({ message: error?.message })
     }
@@ -14,7 +14,7 @@ export default handler()
     const { cookie } = req.headers;
 
     try {
-      res.status(200).json('data')
+      res.status(200).json('datas')
     } catch (error: any) {
       res.status(error?.response?.status || 404).json({ message: error?.message })
     }
