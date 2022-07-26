@@ -1,4 +1,4 @@
-// import "@testing-libary/jest-dom/extend-expect"
+import "@testing-libary/jest-dom/extend-expect"
 // import { server } from "./src/fixtures/server"
 
 // beforeAll(() => server.listen())
