@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
+    "axios": "^0.27.2",
     "msw": "^0.42.3",
     "next": "12.2.0",
     "next-connect": "^0.13.0",
