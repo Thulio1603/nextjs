@@ -1,11 +1,10 @@
 import { pokemon } from "../api/network";
 
 
-export async function getPokemons() {
+export async function getPokemon() {
   
   try {
     const { data } = await pokemon.get('pokemon/1')  
-    console.log('service: ', data)
     return data
   } catch (error) {
     console.log('ERROR GET POKEMON', error)
