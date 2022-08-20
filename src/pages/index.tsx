@@ -104,7 +104,7 @@ export async function getServerSideProps({req, res}) {
   let pokemon: pokemon = {}
 
   try {
-    const response = await getPokemon()
+    const response = await getPokemon('1')
     pokemon = response
   } catch (error) {
     console.log('ERROR GET POKEMONS', error.message)

@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@stitches/react': ^1.2.8
+  '@swc/helpers': ^0.4.7
   '@testing-library/jest-dom': ^5.16.4
   '@testing-library/react': ^13.3.0
   '@types/node': 18.0.0
@@ -23,6 +24,7 @@ specifiers:
 
 dependencies:
   '@stitches/react': 1.2.8_react@18.2.0
+  '@swc/helpers': 0.4.7
   axios: 0.27.2
   msw: 0.42.3_typescript@4.7.4
   next: 12.2.0_biqbaboplfbrettd7655fr4n2y
@@ -888,6 +890,12 @@ packages:
 
   /@swc/helpers/0.4.2:
     resolution: {integrity: sha512-556Az0VX7WR6UdoTn4htt/l3zPQ7bsQWK+HqdG4swV7beUCxo/BqmvbOpUkTIm/9ih86LIf1qsUnywNL3obGHw==}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
+
+  /@swc/helpers/0.4.7:
+    resolution: {integrity: sha512-jJKr/2JOivCQxb5Xpli3asedRLH34QgJ3G+7gm6CoCOwt/LDDX9g67OuxvjFOiYZfngWYB66ZbjU6cUNtQdavg==}
     dependencies:
       tslib: 2.4.0
     dev: false
