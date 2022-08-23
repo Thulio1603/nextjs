@@ -165,7 +165,8 @@ globalCss({
   },
   'html, body': {
     backgroundColor: '$background',
-    color: '$text'
+    color: '$text',
+    fontFamily: 'Muli, sans-serif'
   },
   'p, small': {
     color: 'inherit',

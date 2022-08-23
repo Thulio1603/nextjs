@@ -1,11 +1,13 @@
 export type pokemon = { 
-  name?: string
+  id: number
+  base_experience?: number
+  name: string
   past_types?: []
   species?: {
     name: string
     url: string
   }
-  sprites?: { 
+  sprites: { 
     back_default: string
     back_female: string
     back_shiny_female: string
@@ -14,15 +16,18 @@ export type pokemon = {
     front_shiny: string
     front_shiny_female: string
     other: {
-      dream_world: {}
+      dream_world: {
+        front_default: string
+        front_female: string
+      }
       home: {}
     }
     versions: {}
   }
-  stats?: []
-  types?: [{
+  stats: []
+  types: [{
     slot: number
     type: {}
   }]
-  weight?: number
+  weight: number
 }

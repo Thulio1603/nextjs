@@ -151,5 +151,6 @@ export const baseTheme = {
   },
   transitions: {
     basic: 'all cubic-bezier(0.4, 0, 0.2, 1) 150ms',
+    button: 'all ease-in 300ms'
   }
 }
