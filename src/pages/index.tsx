@@ -51,10 +51,6 @@ const Home = ({ pokemon }: homeProps) => {
       }
     }
   
-    useEffect(() => { 
-  
-    },[])
-  
     return (
       <Wrapper>
         <Image src={src} alt={namePokemon} title={namePokemon} width={'500'} height={'500'}/>
