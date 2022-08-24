@@ -17,58 +17,57 @@ const Wrapper = styled('section', {
   height: '85vh',
   ...defaults.flex.center,
   justifyContent: 'space-between',
-  '@md': { 
+  '@md': {
     padding: '$xxxl',
   }
 })
 
-const Title = styled('h1', { 
+const Title = styled('h1', {
   textTransform: 'capitalize',
   color: '$white',
   textAlign: 'center'
 })
 
-type homeProps = { 
+type homeProps = {
   pokemon: pokemon
 }
-
+//TODO fazer busca por nome do pokemon
 const Home = ({ pokemon }: homeProps) => {
-  if(pokemon){
-    const { sprites } = pokemon
-    const [namePokemon , setNamePokemon] = useState(pokemon?.name)
-    const [src , setSrc] = useState(sprites?.other.dream_world.front_default || '')
-    const [countPokemon, setCountPokemon] = useState(1)
-  
-    const changePokemon = async () => { 
-      setCountPokemon(countPokemon + 1)
-      try {
-        const response = await api.get('api/pokemon', { params: { id: countPokemon }})
-        const newPokemon: pokemon = response.data
-        setNamePokemon(newPokemon.name)
-        setSrc(newPokemon.sprites.other.dream_world.front_default)
-      } catch ({ message }) {
-        console.log('ERROR CHANGE POKEMON', message)
-      }
-    }
-  
-    return (
-      <Wrapper>
-        <Image src={src} alt={namePokemon} title={namePokemon} width={'500'} height={'500'}/>
-        
-        <Title>{namePokemon}</Title>
-        <Button onClick={() => changePokemon()}>Trocar Pokemon</Button>
-      </Wrapper>
-    )
-  }else { 
-    return <Title>Atualize a tela</Title>
+  if (!pokemon) {
+    return <Title>Sem Pokemon</Title>
   }
 
+  const { sprites } = pokemon
+  const [namePokemon, setNamePokemon] = useState(pokemon?.name)
+  const [src, setSrc] = useState(sprites?.other.dream_world.front_default || '')
+  const [countPokemon, setCountPokemon] = useState(1)
+
+  const changePokemon = async () => {
+    setCountPokemon(countPokemon + 1)
+    try {
+      const response = await api.get('api/pokemon', { params: { id: countPokemon } })
+      const newPokemon: pokemon = response.data
+      setNamePokemon(newPokemon.name)
+      setSrc(newPokemon.sprites.other.dream_world.front_default)
+    } catch ({ message }) {
+      console.log('ERROR CHANGE POKEMON', message)
+    }
+  }
+
+  return (
+    <Wrapper>
+      <Image src={src} alt={namePokemon} title={namePokemon} width={'500'} height={'500'} />
+
+      <Title>{namePokemon}</Title>
+      <Button onClick={() => changePokemon()}>Trocar Pokemon</Button>
+    </Wrapper>
+  )
 }
 
 export default Home
 
 // TODO estudar melhor forma de tipar pokemonProps. Pokemon com parametro obrigatorios
-type pokemonProps = { 
+type pokemonProps = {
   id?: number
   base_experience?: number
   name?: string
@@ -77,7 +76,7 @@ type pokemonProps = {
     name: string
     url: string
   }
-  sprites?: { 
+  sprites?: {
     back_default: string
     back_female: string
     back_shiny_female: string
@@ -102,7 +101,7 @@ type pokemonProps = {
   weight?: number
 }
 
-export async function getServerSideProps({req, res}) {
+export async function getServerSideProps({ req, res }) {
   let pokemon: pokemonProps = {}
 
   try {
@@ -122,7 +121,7 @@ export async function getServerSideProps({req, res}) {
 
   return {
     props: {
-       pokemon: pokemon || null
+      pokemon: pokemon || null
     }
   }
 }
