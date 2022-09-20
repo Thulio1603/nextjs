@@ -10,7 +10,7 @@ import { api } from '../api/network';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-const Wrapper = styled('section', {
+export const Wrapper = styled('section', {
   width: '100%',
   padding: '$xs',
   flexFlow: 'column',
@@ -22,7 +22,7 @@ const Wrapper = styled('section', {
   }
 })
 
-const Title = styled('h1', {
+export const Title = styled('h1', {
   textTransform: 'capitalize',
   color: '$white',
   textAlign: 'center'
@@ -67,7 +67,7 @@ const Home = ({ pokemon }: homeProps) => {
 export default Home
 
 // TODO estudar melhor forma de tipar pokemonProps. Pokemon com parametro obrigatorios
-type pokemonProps = {
+export type pokemonProps = {
   id?: number
   base_experience?: number
   name?: string
