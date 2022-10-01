@@ -7,7 +7,6 @@ import { getWeather } from '../services/weather';
 import Image from 'next/image';
 import { Button } from '../elements/Button';
 import { api } from '../api/network';
-import { useEffect } from 'react';
 import { useState } from 'react';
 
 export const Wrapper = styled('section', {
@@ -40,7 +39,7 @@ const Home = ({ pokemon }: homeProps) => {
   const { sprites } = pokemon
   const [namePokemon, setNamePokemon] = useState(pokemon?.name)
   const [src, setSrc] = useState(sprites?.other.dream_world.front_default || '')
-  const [countPokemon, setCountPokemon] = useState(1)
+  const [countPokemon, setCountPokemon] = useState(2)
 
   const changePokemon = async () => {
     setCountPokemon(countPokemon + 1)
