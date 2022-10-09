@@ -60,31 +60,33 @@ const SelectPage = () => {
 
   return (
     <Wrapper>
-      <Select name='select-pokemon' 
-        onValueChange={(pokemon) => {
-          const [name, url] = pokemon.split(';')
-          setPokemon(name, url)
-        }}
-      >
-        <Select.Trigger>
-          Selecione o Pokemon
-        </Select.Trigger>
-        <Select.Content>
-          {pokemons.map((pokemon, key) => {
-            return (
-              <Select.Item key={key} value={`${pokemon.name};${pokemon.url}`}>
-                {pokemon.name}
-              </Select.Item>
-            )
-          })}
-        </Select.Content>
-      </Select>
+      <div style={{position: 'relative', zIndex: '9'}}>
+        <Select name='select-pokemon' 
+          onValueChange={(pokemon) => {
+            const [name, url] = pokemon.split(';')
+            setPokemon(name, url)
+          }}
+        >
+          <Select.Trigger>
+            Selecione o Pokemon
+          </Select.Trigger>
+          <Select.Content style={{border: 'none'}}>
+            {pokemons.map((pokemon, key) => {
+              return (
+                <Select.Item key={key} value={`${pokemon.name};${pokemon.url}`} style={{border: 'none'}}>
+                  {pokemon.name}
+                </Select.Item>
+              )
+            })}
+          </Select.Content>
+        </Select>
+      </div>
       {namePokemon !== '' &&
-        <>
+        <div style={{position: 'relative', zIndex: '1'}}>
           <Image src={src} alt={namePokemon} title={namePokemon} width={'500'} height={'500'} />
 
           <Title>{namePokemon}</Title>
-        </>}
+        </div>}
     </Wrapper>
   )
 }

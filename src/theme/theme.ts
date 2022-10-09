@@ -49,11 +49,8 @@ export const baseTheme = {
     dropDownItemHeight: '$13',
     searchFocusWidth: '240px',
 
-    avatarLarge: '140px',
-
-    widthProfile: '220px',
-
-    widthPageProfile: '550px',
+    widthSelect: '260px',
+    heightSelect: '50px'
   },
   space: {
     xxs: '4px',

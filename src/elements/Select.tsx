@@ -9,15 +9,30 @@ const Select = ({children, ...rest}: SelectProps) =>
   <SelectPrimitive.Root {...rest}>{children}</SelectPrimitive.Root>
 
 Select.Trigger = styled(SelectPrimitive.Trigger, { 
-  background: 'black'
+  background: '$yellow500',
+  color: '$black',
+  border: 'none',
+  height: '60px',
+  padding: '0 $sm',
+  width: '$widthSelect',
+  fontSize: '$xl2',
 })  
 
 Select.Content = styled(SelectPrimitive.Content, { 
-  background: 'purple'
+  background: '$neutralLightContrast',
 })
 
 Select.Item = styled(SelectPrimitive.Item, { 
-  background: 'red'
+  widht: '100%',
+  background: '$neutralLightContrast',
+  width: '$widthSelect',
+  height: '$heightSelect',
+  fontSize: '$xl2',
+  display: 'flex',
+  alignItems: 'center',
+  outline: 0,
+  cursor: 'pointer',
+  paddingLeft: '$sm',
 })
 
 export default Select
