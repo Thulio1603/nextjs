@@ -10,7 +10,7 @@ const Select = ({children, ...rest}: SelectProps) =>
 
 Select.Trigger = styled(SelectPrimitive.Trigger, { 
   background: 'black'
-})
+})  
 
 Select.Content = styled(SelectPrimitive.Content, { 
   background: 'purple'
