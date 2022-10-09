@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled, defaults } from '../theme/stitches.config'
 import { getPokemon } from '../services/pokemon';
-import { pokemon } from '../model/pokemon';
+import { Pokemon } from '../model/pokemon';
 import "react-multi-carousel/lib/styles.css";
 import { getWeather } from '../services/weather';
 import Image from 'next/image';
@@ -28,7 +28,7 @@ export const Title = styled('h1', {
 })
 
 type homeProps = {
-  pokemon: pokemon
+  pokemon: Pokemon
 }
 //TODO fazer busca por nome do pokemon
 const Home = ({ pokemon }: homeProps) => {
@@ -45,7 +45,7 @@ const Home = ({ pokemon }: homeProps) => {
     setCountPokemon(countPokemon + 1)
     try {
       const response = await api.get('api/pokemon', { params: { id: countPokemon } })
-      const newPokemon: pokemon = response.data
+      const newPokemon: Pokemon = response.data
       setNamePokemon(newPokemon.name)
       setSrc(newPokemon.sprites.other.dream_world.front_default)
     } catch ({ message }) {

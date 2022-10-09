@@ -1,4 +1,4 @@
-export type pokemon = { 
+export type Pokemon = { 
   id: number
   base_experience?: number
   name: string
@@ -30,4 +30,16 @@ export type pokemon = {
     type: {}
   }]
   weight: number
+}
+
+export type ResultsPokemon = { 
+  name: string
+  url: string
+}
+
+export type PokemonLimit = { 
+  count: number
+  next: string
+  previus: string
+  results: ResultsPokemon[]
 }
